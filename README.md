@@ -54,7 +54,14 @@ Typeorm will check differences with created DB and it will create a timestamped 
 $ npm run typeorm -- migration:run
 ```
 
+Typeorm-cli documentation is available from [here](https://github.com/typeorm/typeorm/blob/master/docs/using-cli.md). Typeorm-cli commands can be run through npm i.e.
+
+```
+$ npm run typeorm -- <some TYPEORM-CLI command>
+```
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+Nest is [MIT licensed](https://opensource.org/licenses/MIT).
+
+**Happy coding!!!**
