@@ -1,0 +1,26 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - '.:/src'
+    command: npm run start:nodemon-debug
+    container_name: starter_web
+    ports:
+      - '3000:3000'
+      - '9229:9229'
+    env_file: .env
+  db:
+    build: ./dev/mssql/
+    ports:
+      - '1433:1433'
+    env_file: .env
+    volumes:
+      - 'starter_db_mssql_volume:/var/opt/mssql'
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+volumes:
+  starter_db_mssql_volume:
